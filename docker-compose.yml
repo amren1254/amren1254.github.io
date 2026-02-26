@@ -1,0 +1,9 @@
+services:
+  portfolio-website:
+    image: nginx:alpine
+    container_name: amren-portfolio
+    ports:
+      - "8085:80"
+    volumes:
+      - ./:/usr/share/nginx/html:ro
+    restart: unless-stopped
